@@ -82,27 +82,6 @@ VALUES (46515616.65483),
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 SELECT CONCAT(NAME, " ", PRICE) AS NAME_AND_PRICE,         # unisce in un'unica colonna i valori di due campi
  LOWER(NAME) AS LOWERCASE_NAME,                            # stampa i valori in minuscolo
  UPPER(NAME) AS UPPERCASE_NAME,                            # stampa i valori in maiuscolo
@@ -116,6 +95,8 @@ SELECT CONCAT(NAME, " ", PRICE) AS NAME_AND_PRICE,         # unisce in un'unica 
  FROM MEAL_ORDER; 
  SELECT FORMAT(NUM, 2) AS FORMATTED_NUM   # formatta il numero separando ogni numero di cifre con il . e arrotonda ad un numero di cifre decimali a mia scelta
  FROM NUMBER;
+
+SELECT DATE_SUB(DATE_ADD(DATE_SUB(NOW(), INTERVAL 18 DAY), INTERVAL 5 MONTH), INTERVAL 32 YEAR) AS MY_BIRTHDAY;
  
  
 
