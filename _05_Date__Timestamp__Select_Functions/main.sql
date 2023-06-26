@@ -114,7 +114,7 @@ SELECT CONCAT(NAME, " ", PRICE) AS NAME_AND_PRICE,         # unisce in un'unica 
  SELECT DATE_ADD(TIME_MEAL_ORDERED, INTERVAL 10 MINUTE) AS SHIFTED_AHEAD_TIME_MEAL_ORDERED,  # aggiunge un intervallo di tempo alla data
  DATE_SUB(TIME_MEAL_ORDERED, INTERVAL 10 MINUTE) AS SHIFTED_BACK_TIME_MEAL_ORDERED  # sottrae un intervallo di tempo alla data
  FROM MEAL_ORDER; 
- SELECT FORMAT(NUM, 2) AS FORMATTED_NUM   # formatta il numero separando ogni # cifre con il . e arrotonda ad un numero di cifre decimali a mia scelta
+ SELECT FORMAT(NUM, 2) AS FORMATTED_NUM   # formatta il numero separando ogni numero di cifre con il . e arrotonda ad un numero di cifre decimali a mia scelta
  FROM NUMBER;
  
  
