@@ -29,3 +29,54 @@ DELETE FROM CUSTOMER
 WHERE ID = 1;
 
 TRUNCATE CUSTOMER;
+
+
+
+#Look at the tables below and write which column(s) you think would make a good primary key.
+
+#Question
+
+CREATE TABLE Customers (
+ customer_id INT NOT NULL AUTO_INCREMENT,
+ first_name VARCHAR(255) NOT NULL,
+ last_name VARCHAR(255) NOT NULL,
+ email VARCHAR(255) NOT NULL,
+ PRIMARY KEY (customer_id)
+); 
+#Answer
+#customer_id
+
+
+#Question
+
+CREATE TABLE Products (
+ product_name VARCHAR(255) NOT NULL,
+ product_description VARCHAR(255) NOT NULL,
+ product_price DECIMAL(10, 2) NOT NULL,
+ product_quantity INT NOT NULL
+);
+#Answer
+#product_name
+
+
+#Question
+
+CREATE TABLE Orders (
+ order_id INT NOT NULL AUTO_INCREMENT,
+ customer_id INT NOT NULL,
+ expected_arrival_time DATE
+);
+#Answer
+#order_id
+
+
+#Question
+
+CREATE TABLE Product_Orders (
+ order_id INT NOT NULL AUTO_INCREMENT,
+ product_name VARCHAR(255) NOT NULL,
+ total_revenue DOUBLE
+);
+#Answer
+#order_id
+
