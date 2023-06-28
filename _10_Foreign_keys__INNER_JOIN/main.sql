@@ -15,4 +15,9 @@ group by M.NAME;
 select COUNT(I.MEAL_ID) / COUNT(distinct M.MEAL_ID) from MEAL M  
 inner join ingredient i on I.MEAL_ID = M.MEAL_ID;
 
+select m.NAME, count(i.NAME) as ingredient_per_meal_count  from meal m  
+inner join ingredient i on I.MEAL_ID = M.MEAL_ID
+group by m.NAME
+having ingredient_per_meal_count > 3;
+
 
