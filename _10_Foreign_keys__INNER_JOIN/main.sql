@@ -20,28 +20,38 @@ inner join ingredient i on I.MEAL_ID = M.MEAL_ID
 group by m.NAME
 having ingredient_per_meal_count > 3;
 
+
+
 #Using the following table definitions, write an inner join for the two tables
-#CREATE TABLE CUSTOMER (
-#    CUSTOMER_ID INT,
-#    NAME VARCHAR(255),
-#    ADDRESS VARCHAR(255)
-#);
-#CREATE TABLE ORDER (
-#    ORDER_ID INT,
-#    CUSTOMER_ID INT,
-#    ORDER_DATE DATE,
-#    TOTAL_COST DECIMAL(10,2)
-#);
+  
+CREATE TABLE CUSTOMER (
+    CUSTOMER_ID INT,
+    NAME VARCHAR(255),
+    ADDRESS VARCHAR(255)
+);
+CREATE TABLE ORDER (
+    ORDER_ID INT,
+    CUSTOMER_ID INT,
+    ORDER_DATE DATE,
+    TOTAL_COST DECIMAL(10,2)
+);
+inner join ORDER on ORDER.CUSTOMER_ID = CUSTOMER.CUSTOMER_ID
+
+
 #Using the following table definitions, write an inner join for the two tables
-#CREATE TABLE PRODUCT (
-#    PRODUCT_ID INT,
-#    NAME VARCHAR(255),
-#    PRICE DECIMAL(10,2)
-#);
-#CREATE TABLE INVENTORY (
-#    PRODUCT_ID INT,
-#    STORE_ID INT,
-#    QUANTITY INT
-#);
+  
+CREATE TABLE PRODUCT (
+    PRODUCT_ID INT,
+    NAME VARCHAR(255),
+    PRICE DECIMAL(10,2)
+);
+CREATE TABLE INVENTORY (
+    PRODUCT_ID INT,
+    STORE_ID INT,
+    QUANTITY INT
+);
+inner join INVENTORY on INVENTORY.PRODUCT_ID = PRODUCT.PRODUCT_ID
+
+
 
 
